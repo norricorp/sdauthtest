@@ -57,8 +57,8 @@
 	async function setLogout() {
 
 		console.log("logout: refresh token is " + $refreshToken);
-//		await directus.logout()
-		await directus.request(logout($refreshToken))
+		await directus.logout()
+//		await directus.request(logout($refreshToken, 'json'))
 			.then(() => {
 				console.log("logout OK - auth token is " + $authToken)
 				$authenticated = false;
